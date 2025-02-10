@@ -55,11 +55,11 @@
     
     .time-block {
     text-align: center;
-    padding: 12px;
+    padding: 16px;  /* 增加内边距 */
     background: #f8f9fa;
     border-radius: 12px;
     transition: all 0.2s ease;
-    }
+  }
   
     .time-block:hover {
         background: #e9ecef;
@@ -84,11 +84,14 @@
     }
     
     .time-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        margin-top: 20px;
-    }
+    display: grid;
+    grid-template-columns: 1fr;  /* 改为单列 */
+    gap: 12px;  /* 减小间距 */
+    margin-top: 20px;
+    max-width: 300px;  /* 限制最大宽度 */
+    margin-left: auto;
+    margin-right: auto;
+    } 
     
     .countdown-container {
       margin-top: 24px;
