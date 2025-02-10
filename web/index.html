@@ -28,6 +28,11 @@
     
     .market-status {
       margin: 24px 0;  /* 改为在时间显示下方 */
+      padding: 12px 24px;  /* 添加内边距 */
+      border-radius: 8px;  /* 添加圆角 */
+      display: inline-block;  /* 让背景色只包裹文字 */
+      font-weight: 500;  /* 加粗字体 */
+      font-size: 1.1rem;  /* 增大字体 */
     }
     
     .status-trading { 
@@ -78,22 +83,14 @@
     }
     
     .time-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);  /* 默认两列 */
-      gap: 16px;
-      margin-bottom: 24px;  /* 增加底部间距 */
-      max-width: 600px;  /* 增加最大宽度 */
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* 在移动设备上改为单列显示 */
-    @media (max-width: 576px) {
-      .time-grid {
-        grid-template-columns: 1fr;  /* 移动端单列 */
-        max-width: 300px;
-      }
-    }
+    display: grid;
+    grid-template-columns: 1fr;  /* 改为单列 */
+    gap: 12px;  /* 减小间距 */
+    margin-top: 20px;
+    max-width: 300px;  /* 限制最大宽度 */
+    margin-left: auto;
+    margin-right: auto;
+    } 
     
     .countdown-container {
       margin-top: 24px;
@@ -147,8 +144,10 @@
   </style>
 </head>
 <body class="container">
-  <!-- 调整 HTML 结构，将时间显示移到最上方 -->
+  <!-- 市场状态区域 -->
   <div class="section market-status-section">
+    <div id="currentState" class="market-status">--</div>
+    
     <div class="time-grid">
       <div class="time-block">
         <div class="time-label">美国东部时间</div>
@@ -159,8 +158,6 @@
         <div id="chinaTime" class="time-display">--</div>
       </div>
     </div>
-
-    <div id="currentState" class="market-status">--</div>
     
     <div class="countdown-container">
       <div class="next-state">距离<span id="nextState">--</span></div>
