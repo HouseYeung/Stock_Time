@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+websocket_client
+pytz
+requests
+finnhub-python
