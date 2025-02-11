@@ -11,6 +11,8 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
+FINNHUB_TOKEN = os.environ.get("FINNHUB_TOKEN")
+
 # 时区设置：美国东部时间和中国北京时间
 tz_us_eastern = pytz.timezone("America/New_York")
 tz_china = pytz.timezone("Asia/Shanghai")
